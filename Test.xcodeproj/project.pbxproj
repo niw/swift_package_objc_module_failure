@@ -11,12 +11,12 @@
 		5492675C24A43AC600B66523 /* TestFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5492675524A43AC600B66523 /* TestFramework.framework */; };
 		5492675D24A43AC600B66523 /* TestFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5492675524A43AC600B66523 /* TestFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5492676424A43B5D00B66523 /* TestFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492676324A43B5D00B66523 /* TestFramework.swift */; };
-		5492676724A43BB400B66523 /* TestPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 5492676624A43BB400B66523 /* TestPackage */; };
 		5492677D24A43CC700B66523 /* TestFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5492677C24A43CC700B66523 /* TestFrameworkTests.swift */; };
 		54E5C34124A43849001E8C19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E5C34024A43849001E8C19 /* AppDelegate.swift */; };
 		54E5C34524A43849001E8C19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E5C34424A43849001E8C19 /* ViewController.swift */; };
 		54E5C34A24A4384A001E8C19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E5C34924A4384A001E8C19 /* Assets.xcassets */; };
 		54E5C34D24A4384A001E8C19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54E5C34B24A4384A001E8C19 /* LaunchScreen.storyboard */; };
+		D600CA8424A44D140044D662 /* TestPackageObjC in Frameworks */ = {isa = PBXBuildFile; productRef = D600CA8324A44D140044D662 /* TestPackageObjC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,7 +37,6 @@
 		5492675524A43AC600B66523 /* TestFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5492675724A43AC600B66523 /* TestFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFramework.h; sourceTree = "<group>"; };
 		5492675824A43AC600B66523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5492676224A43B1800B66523 /* TestPackage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestPackage; sourceTree = "<group>"; };
 		5492676324A43B5D00B66523 /* TestFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFramework.swift; sourceTree = "<group>"; };
 		5492677A24A43CC700B66523 /* TestFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5492677C24A43CC700B66523 /* TestFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFrameworkTests.swift; sourceTree = "<group>"; };
@@ -55,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5492676724A43BB400B66523 /* TestPackage in Frameworks */,
+				D600CA8424A44D140044D662 /* TestPackageObjC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +101,8 @@
 				54E5C33F24A43849001E8C19 /* Test */,
 				5492675624A43AC600B66523 /* TestFramework */,
 				5492677B24A43CC700B66523 /* TestFrameworkTests */,
-				5492676224A43B1800B66523 /* TestPackage */,
 				54E5C33E24A43849001E8C19 /* Products */,
+				D600CA7C24A443DC0044D662 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +144,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D600CA7C24A443DC0044D662 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -174,7 +180,7 @@
 			);
 			name = TestFramework;
 			packageProductDependencies = (
-				5492676624A43BB400B66523 /* TestPackage */,
+				D600CA8324A44D140044D662 /* TestPackageObjC */,
 			);
 			productName = TestFramework;
 			productReference = 5492675524A43AC600B66523 /* TestFramework.framework */;
@@ -201,6 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54E5C35124A4384A001E8C19 /* Build configuration list for PBXNativeTarget "Test" */;
 			buildPhases = (
+				D600CA8224A449990044D662 /* ShellScript */,
 				54E5C33924A43849001E8C19 /* Sources */,
 				54E5C33A24A43849001E8C19 /* Frameworks */,
 				54E5C33B24A43849001E8C19 /* Resources */,
@@ -211,6 +218,8 @@
 			dependencies = (
 			);
 			name = Test;
+			packageProductDependencies = (
+			);
 			productName = Test;
 			productReference = 54E5C33D24A43849001E8C19 /* Test.app */;
 			productType = "com.apple.product-type.application";
@@ -246,6 +255,9 @@
 				Base,
 			);
 			mainGroup = 54E5C33424A43849001E8C19;
+			packageReferences = (
+				D600CA7924A443D00044D662 /* XCRemoteSwiftPackageReference "niw-20200625-package" */,
+			);
 			productRefGroup = 54E5C33E24A43849001E8C19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -282,6 +294,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D600CA8224A449990044D662 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5492675124A43AC600B66523 /* Sources */ = {
@@ -541,16 +573,20 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3B8C483UAP;
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CFLAGS = "-fmodule-map-file=${OBJROOT}/GeneratedModuleMaps/${PLATFORM_NAME}/TestPackage.modulemap";
+				OTHER_SWIFT_FLAGS = "-Xcc -fmodule-map-file=${OBJROOT}/GeneratedModuleMaps/${PLATFORM_NAME}/TestPackage.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = at.niw.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -561,16 +597,20 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3B8C483UAP;
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CFLAGS = "-fmodule-map-file=${OBJROOT}/GeneratedModuleMaps/${PLATFORM_NAME}/TestPackage.modulemap";
+				OTHER_SWIFT_FLAGS = "-Xcc -fmodule-map-file=${OBJROOT}/GeneratedModuleMaps/${PLATFORM_NAME}/TestPackage.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = at.niw.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -617,10 +657,22 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		D600CA7924A443D00044D662 /* XCRemoteSwiftPackageReference "niw-20200625-package" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/omochi/niw-20200625-package";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		5492676624A43BB400B66523 /* TestPackage */ = {
+		D600CA8324A44D140044D662 /* TestPackageObjC */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = TestPackage;
+			package = D600CA7924A443D00044D662 /* XCRemoteSwiftPackageReference "niw-20200625-package" */;
+			productName = TestPackageObjC;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

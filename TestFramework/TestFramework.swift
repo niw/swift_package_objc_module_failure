@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import TestPackageObjC
 import TestPackage
 
 @objc

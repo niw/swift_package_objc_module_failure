@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TestPackage",
+        "repositoryURL": "https://github.com/omochi/niw-20200625-package",
+        "state": {
+          "branch": "master",
+          "revision": "3acdfc5e622dac5784f6617d98ed37db1b7ead5e",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
